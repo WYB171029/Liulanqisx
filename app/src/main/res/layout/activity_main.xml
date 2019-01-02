@@ -11,53 +11,90 @@
     <EditText
         android:id="@+id/edt_main_input"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="39dp"
+        android:background="@android:color/background_light"
         android:ems="10"
         android:hint="输入内容"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="36dp" />
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_main_logol"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_main_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="13dp"
         android:text="搜索"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="98dp" />
+        app:layout_constraintStart_toStartOf="@+id/edt_main_input"
+        app:layout_constraintTop_toBottomOf="@+id/edt_main_input" />
 
     <Button
         android:id="@+id/btn_main_off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="13dp"
         android:text="关闭"
-        tools:layout_editor_absoluteX="250dp"
-        tools:layout_editor_absoluteY="98dp" />
+        app:layout_constraintEnd_toEndOf="@+id/edt_main_input"
+        app:layout_constraintTop_toBottomOf="@+id/edt_main_input" />
 
     <Button
         android:id="@+id/btn_main_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:text="上一页"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="512dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_main_cheif"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_main_cheif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
         android:text="主页"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="512dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_main_next"
+        app:layout_constraintStart_toEndOf="@+id/btn_main_up" />
 
     <Button
         android:id="@+id/btn_main_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:text="下一页"
-        tools:layout_editor_absoluteX="298dp"
-        tools:layout_editor_absoluteY="512dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_main_cheif" />
+
+    <Button
+        android:id="@+id/btn_main_logol"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@android:color/transparent"
+        android:text="青山搜索"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edt_main_input"
+        app:layout_constraintEnd_toStartOf="@+id/edt_main_input"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
