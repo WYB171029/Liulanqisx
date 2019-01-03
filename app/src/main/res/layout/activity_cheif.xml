@@ -77,26 +77,26 @@
         tools:layout_editor_absoluteY="280dp" />
 
     <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/btn_cheif_xinlang"
+        android:layout_width="103dp"
+        android:layout_height="83dp"
+        android:background="@drawable/xinlang"
         tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="419dp" />
+        tools:layout_editor_absoluteY="403dp" />
 
     <Button
-        android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/btn_cheif_aiqiyi"
+        android:layout_width="118dp"
+        android:layout_height="83dp"
+        android:background="@drawable/aiqiyi"
         tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="419dp" />
+        tools:layout_editor_absoluteY="403dp" />
 
     <Button
-        android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/btn_cheif_youku"
+        android:layout_width="137dp"
+        android:layout_height="80dp"
+        android:background="@drawable/youku"
         tools:layout_editor_absoluteX="375dp"
-        tools:layout_editor_absoluteY="419dp" />
+        tools:layout_editor_absoluteY="403dp" />
 </android.support.constraint.ConstraintLayout>
