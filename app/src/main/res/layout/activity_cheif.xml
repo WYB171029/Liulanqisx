@@ -45,36 +45,36 @@
         tools:layout_editor_absoluteY="131dp" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/btn_cheif_sougou"
+        android:layout_width="134dp"
+        android:layout_height="96dp"
+        android:background="@drawable/sougou"
         tools:layout_editor_absoluteX="375dp"
         tools:layout_editor_absoluteY="131dp" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/btn_cheif_baiduyun"
+        android:layout_width="104dp"
+        android:layout_height="95dp"
+        android:background="@drawable/baiduyun"
         tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="319dp" />
+        tools:layout_editor_absoluteY="280dp" />
 
     <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/btn_cheif_qq"
+        android:layout_width="118dp"
+        android:layout_height="92dp"
+        android:background="@drawable/qq"
         tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="319dp" />
+        tools:layout_editor_absoluteY="280dp" />
 
     <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/btn_cheif_qqyouxiang"
+        android:layout_width="134dp"
+        android:layout_height="89dp"
+        android:background="@drawable/qqyouxiang"
         tools:layout_editor_absoluteX="375dp"
-        tools:layout_editor_absoluteY="319dp" />
+        tools:layout_editor_absoluteY="280dp" />
 
     <Button
         android:id="@+id/button8"
