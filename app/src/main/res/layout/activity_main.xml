@@ -11,18 +11,18 @@
     <EditText
         android:id="@+id/edt_main_input"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="4dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="108dp"
+        android:layout_marginTop="108dp"
         android:background="@android:color/background_light"
         android:ems="10"
         android:hint="输入内容"
         android:inputType="textPersonName"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_main_shizheng"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_main_uc"
         app:layout_constraintEnd_toEndOf="@+id/btn_main_shizheng"
         app:layout_constraintStart_toEndOf="@+id/btn_main_up"
-        app:layout_constraintTop_toTopOf="@+id/btn_main_search" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_main_off"
@@ -78,13 +78,15 @@
         android:id="@+id/btn_main_search"
         android:layout_width="wrap_content"
         android:layout_height="52dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="195dp"
+        android:layout_marginBottom="106dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="104dp"
         android:background="#75000000"
         android:text="青山搜索"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_main_uc"
         app:layout_constraintEnd_toStartOf="@+id/edt_main_input"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -99,13 +101,13 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_mian_renmin" />
 
     <Button
-        android:id="@+id/btn_main_souhu"
+        android:id="@+id/btn_main_uc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="33dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="12dp"
-        android:text="搜狐"
+        android:text="UC"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/btn_main_baidu "
         app:layout_constraintTop_toBottomOf="@+id/btn_main_zhongyang" />
@@ -136,22 +138,23 @@
         android:id="@+id/btn_mian_renmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
         android:text="人民网"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/btn_main_search"
-        app:layout_constraintTop_toBottomOf="@+id/btn_main_search" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_main_zhongyang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="48dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp"
         android:text="中央新闻网"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/btn_main_souhu"
-        app:layout_constraintTop_toBottomOf="@+id/edt_main_input" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_mian_renmin"
+        app:layout_constraintStart_toStartOf="@+id/btn_main_uc" />
 
     <Button
         android:id="@+id/btn_main_shizheng"
@@ -159,11 +162,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="75dp"
         android:layout_marginRight="75dp"
+        android:layout_marginTop="2dp"
         android:text="时政要闻"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_mian_renmin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_main_search" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_main_input" />
 
     <android.support.constraint.Barrier
         android:id="@+id/barrier"
