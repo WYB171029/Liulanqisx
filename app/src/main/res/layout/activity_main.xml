@@ -12,14 +12,12 @@
         android:id="@+id/edt_main_input"
         android:layout_width="0dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="108dp"
         android:layout_marginTop="108dp"
         android:background="@android:color/background_light"
         android:ems="10"
         android:hint="输入内容"
         android:inputType="textPersonName"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_main_uc"
         app:layout_constraintEnd_toEndOf="@+id/btn_main_shizheng"
         app:layout_constraintStart_toEndOf="@+id/btn_main_up"
         app:layout_constraintTop_toTopOf="parent" />
@@ -78,35 +76,33 @@
         android:id="@+id/btn_main_search"
         android:layout_width="wrap_content"
         android:layout_height="52dp"
-        android:layout_marginBottom="106dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="104dp"
         android:background="#75000000"
         android:text="青山搜索"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_main_uc"
-        app:layout_constraintEnd_toStartOf="@+id/edt_main_input"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/edt_main_input"
+        app:layout_constraintEnd_toStartOf="@+id/edt_main_input" />
 
     <Button
         android:id="@+id/btn_main_baidu "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
         android:text="百度"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/btn_mian_renmin"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mian_renmin" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_main_uc"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_main_uc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="62dp"
         android:text="UC"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/btn_main_baidu "
@@ -116,57 +112,57 @@
         android:id="@+id/btn_main_taobao "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         android:text="淘宝"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_main_shizheng"
-        app:layout_constraintTop_toBottomOf="@+id/btn_main_zhongyang" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_main_tianmao"
+        app:layout_constraintTop_toTopOf="@+id/btn_main_uc" />
 
     <Button
         android:id="@+id/btn_main_tianmao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
         android:text="天猫"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_main_shizheng"
-        app:layout_constraintTop_toBottomOf="@+id/btn_main_shizheng" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_main_taobao "
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn_mian_renmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="73dp"
         android:text="人民网"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/btn_main_search"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_main_search" />
 
     <Button
         android:id="@+id/btn_main_zhongyang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:layout_marginLeft="49dp"
-        android:layout_marginStart="49dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="46dp"
         android:text="中央新闻网"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_mian_renmin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_mian_renmin"
         app:layout_constraintStart_toStartOf="@+id/btn_main_uc" />
 
     <Button
         android:id="@+id/btn_main_shizheng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginBottom="60dp"
         android:text="时政要闻"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_main_input" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_main_tianmao"
+        app:layout_constraintEnd_toEndOf="@+id/btn_main_tianmao"
+        app:layout_constraintStart_toEndOf="@+id/btn_main_next" />
 
     <android.support.constraint.Barrier
         android:id="@+id/barrier"

@@ -5,157 +5,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/webwxgetmsgimg"
-    tools:context=".cheif">
+    tools:context=".cheif"
+    tools:layout_editor_absoluteY="25dp">
 
     <TextView
         android:id="@+id/tv_main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="57dp"
-        android:layout_marginTop="33dp"
         android:background="@android:color/darker_gray"
         android:text="青山浏览器"
         android:textColor="@android:color/holo_purple"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_cheif_uc"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_sougou"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="33dp" />
 
     <Button
         android:id="@+id/btn_main_return"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
         android:text="返回主页"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cheif_aiqiyi" />
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="828dp" />
 
     <Button
         android:id="@+id/btn_cheif_baidu  "
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="51dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="131dp"
+        android:layout_width="118dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:background="@drawable/baidu"
         app:layout_constraintBottom_toTopOf="@+id/btn_cheif_baiduyun"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_uc"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_uc" />
 
     <Button
         android:id="@+id/btn_cheif_uc"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="51dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginRight="51dp"
+        android:layout_width="118dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:background="@drawable/uc"
         app:layout_constraintBottom_toTopOf="@+id/btn_cheif_qq"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_sougou"
-        app:layout_constraintStart_toEndOf="@+id/btn_cheif_baidu  "
-        app:layout_constraintTop_toBottomOf="@+id/tv_main_title" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_sougou" />
 
     <Button
         android:id="@+id/btn_cheif_sougou"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="53dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginRight="91dp"
-        android:layout_marginTop="131dp"
+        android:layout_width="116dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="64dp"
         android:background="@drawable/sougou"
         app:layout_constraintBottom_toTopOf="@+id/btn_cheif_qqyouxiang"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_cheif_uc"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="392dp" />
 
     <Button
         android:id="@+id/btn_cheif_baiduyun"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginRight="29dp"
-        android:layout_marginStart="73dp"
+        android:layout_width="119dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:background="@drawable/baiduyun"
         app:layout_constraintBottom_toTopOf="@+id/btn_cheif_xinlang"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_qq"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cheif_baidu  " />
+        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_qq" />
 
     <Button
         android:id="@+id/btn_cheif_qq"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="31dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginRight="51dp"
+        android:layout_width="119dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:background="@drawable/qq"
         app:layout_constraintBottom_toTopOf="@+id/btn_cheif_aiqiyi"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_qqyouxiang"
-        app:layout_constraintStart_toEndOf="@+id/btn_cheif_baiduyun"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cheif_uc" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_qqyouxiang" />
 
     <Button
         android:id="@+id/btn_cheif_qqyouxiang"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="34dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginRight="91dp"
+        android:layout_width="119dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/qqyouxiang"
         app:layout_constraintBottom_toTopOf="@+id/btn_cheif_youku"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_cheif_qq"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cheif_sougou" />
+        tools:layout_editor_absoluteX="392dp" />
 
     <Button
         android:id="@+id/btn_cheif_xinlang"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="401dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginStart="73dp"
+        android:layout_width="120dp"
+        android:layout_height="92dp"
         android:background="@drawable/xinlang"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_aiqiyi"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cheif_baiduyun" />
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="427dp" />
 
     <Button
         android:id="@+id/btn_cheif_aiqiyi"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="342dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginRight="51dp"
+        android:layout_width="119dp"
+        android:layout_height="91dp"
         android:background="@drawable/aiqiyi"
-        app:layout_constraintBottom_toTopOf="@+id/btn_main_return"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cheif_youku"
-        app:layout_constraintStart_toEndOf="@+id/btn_cheif_xinlang"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cheif_qq" />
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="427dp" />
 
     <Button
         android:id="@+id/btn_cheif_youku"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="404dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginRight="88dp"
+        android:layout_width="120dp"
+        android:layout_height="89dp"
         android:background="@drawable/youku"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_cheif_aiqiyi"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cheif_qqyouxiang" />
+        tools:layout_editor_absoluteX="392dp"
+        tools:layout_editor_absoluteY="427dp" />
 </android.support.constraint.ConstraintLayout>
