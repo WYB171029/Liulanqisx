@@ -1,174 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/webwxgetmsgimg"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="25dp">
+    android:background="@drawable/qs">
 
-    <EditText
-        android:id="@+id/edt_main_input"
-        android:layout_width="0dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="108dp"
-        android:background="@android:color/background_light"
-        android:ems="10"
-        android:hint="输入内容"
-        android:inputType="textPersonName"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_main_shizheng"
-        app:layout_constraintStart_toEndOf="@+id/btn_main_up"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_main_off"
-        android:layout_width="wrap_content"
+    <AutoCompleteTextView
+        android:id="@+id/url"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:text="关闭"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:completionHint="输入网址"
+        android:completionThreshold="1"
+        android:inputType="textUri" />
 
-    <Button
-        android:id="@+id/btn_main_up"
-        android:layout_width="wrap_content"
+    <WebView
+        android:id="@+id/show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnLayout"
+        android:layout_below="@+id/url"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="-3dp" />
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginStart="55dp"
-        android:text="上一页"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_main_cheif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginStart="55dp"
-        android:text="主页"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_main_up" />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="返回" />
 
-    <Button
-        android:id="@+id/btn_main_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:layout_marginEnd="143dp"
-        android:layout_marginLeft="143dp"
-        android:layout_marginRight="143dp"
-        android:layout_marginStart="143dp"
-        android:text="下一页"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_main_off"
-        app:layout_constraintStart_toStartOf="@+id/btn_main_cheif" />
+        <Button
+            android:id="@+id/forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="前进" />
 
-    <Button
-        android:id="@+id/btn_main_search"
-        android:layout_width="wrap_content"
-        android:layout_height="52dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="#75000000"
-        android:text="青山搜索"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edt_main_input"
-        app:layout_constraintEnd_toStartOf="@+id/edt_main_input" />
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="刷新" />
 
-    <Button
-        android:id="@+id/btn_main_baidu "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="39dp"
-        android:layout_marginStart="39dp"
-        android:text="百度"
-        android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_main_uc"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="主页" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_main_uc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="36dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="62dp"
-        android:text="UC"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_main_baidu "
-        app:layout_constraintTop_toBottomOf="@+id/btn_main_zhongyang" />
-
-    <Button
-        android:id="@+id/btn_main_taobao "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:text="淘宝"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_main_tianmao"
-        app:layout_constraintTop_toTopOf="@+id/btn_main_uc" />
-
-    <Button
-        android:id="@+id/btn_main_tianmao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:text="天猫"
-        android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_main_taobao "
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btn_mian_renmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="39dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="73dp"
-        android:text="人民网"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_main_search" />
-
-    <Button
-        android:id="@+id/btn_main_zhongyang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="46dp"
-        android:layout_marginStart="46dp"
-        android:text="中央新闻网"
-        android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_mian_renmin"
-        app:layout_constraintStart_toStartOf="@+id/btn_main_uc" />
-
-    <Button
-        android:id="@+id/btn_main_shizheng"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:text="时政要闻"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_main_tianmao"
-        app:layout_constraintEnd_toEndOf="@+id/btn_main_tianmao"
-        app:layout_constraintStart_toEndOf="@+id/btn_main_next" />
-
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        tools:layout_editor_absoluteY="887dp" />
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
