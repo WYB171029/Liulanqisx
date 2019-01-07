@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -21,10 +20,12 @@ import java.util.TimerTask;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class MainActivity extends Activity {
 
-    AutoCompleteTextView url;
-    WebView show;
+    AutoCompleteTextView autotext_url;
+    WebView web_show;
+    private Button closeBtn=null;
 
     String[] booksArray = new String[]
             {
@@ -43,27 +44,20 @@ public class MainActivity extends Activity {
 
         final Activity activity = this;
 
-        show = (WebView)findViewById(R.id.show);
-//        show.getSettings().setJavaScriptEnabled(true);
-//        show.getSettings().setDefaultTextEncodingName("utf-8");
-//        show.setBackgroundColor(0);
-//        show.getBackground().setAlpha(255);
-//        show.loadDataWithBaseURL(null,"加载中...","text/html","utf-8",null);
-//
-//        show.setVisibility(View.VISIBLE);
-        show.setWebViewClient(new WebViewClient()
+        web_show=findViewById(R.id.web_show);
+        web_show.setWebViewClient(new WebViewClient()
         {
             public boolean shouldOverrideUrlLoading(WebView view, String strUrl)
             {
                 view.loadUrl(strUrl);
-                url.setText(strUrl);
+                autotext_url.setText(strUrl);
                 return false;
             }
 
             public void onPageStarted(WebView view, String strUrl, Bitmap favicon)
             {
                 super.onPageStarted(view, strUrl, favicon);
-                url.setText(strUrl);
+                autotext_url.setText(strUrl);
             }
 
             public void onPageFinished(WebView view, String strUrl)
@@ -77,16 +71,16 @@ public class MainActivity extends Activity {
         });
 
 
-        url = (AutoCompleteTextView)findViewById(R.id.url);
+        autotext_url = (AutoCompleteTextView)findViewById(R.id.autotext_url);
         ArrayAdapter<String> aa = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, booksArray);
-        url.setAdapter(aa);
-        url.setOnKeyListener(new View.OnKeyListener()
+        autotext_url.setAdapter(aa);
+        autotext_url.setOnKeyListener(new View.OnKeyListener()
         {
             public boolean onKey(View v, int keyCode, KeyEvent ev)
             {
                 if (keyCode == KeyEvent.KEYCODE_ENTER)
                 {
-                    String strUrl = url.getText().toString();
+                    String strUrl = autotext_url.getText().toString();
 
                     Pattern p = Pattern.compile("http://([\\w-]+\\.)+[\\w-]+(/[\\w-\\./?%=]*)?");
                     Matcher m = p.matcher(strUrl);
@@ -95,7 +89,7 @@ public class MainActivity extends Activity {
                         strUrl = "http://" + strUrl;
                     }
 
-                    show.loadUrl(strUrl);
+                    web_show.loadUrl(strUrl);
 
                     return true;
                 }
@@ -105,18 +99,20 @@ public class MainActivity extends Activity {
         });
 
         // button
-        final Button backBtn = (Button)findViewById(R.id.back);
-        final Button forwardBtn = (Button)findViewById(R.id.forward);
-        Button refreshBtn = (Button)findViewById(R.id.refresh);
-        Button homeBtn = (Button)findViewById(R.id.home);
+        final Button backBtn=findViewById(R.id.btn_back);
+        final Button forwardBtn=findViewById(R.id.btn_forward);
+        final Button closebtn=findViewById(R.id.btn_close);
+        Button refreshBtn=findViewById(R.id.btn_refresh);
+        Button homeBtn=findViewById(R.id.btn_home);
         backBtn.setEnabled(false);
         forwardBtn.setEnabled(false);
+
 
         backBtn.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
             {
-                show.goBack();
+                web_show.goBack();
             }
         });
 
@@ -125,7 +121,7 @@ public class MainActivity extends Activity {
             public void onClick(View v)
             {
                 // TODO
-                show.goForward();
+                web_show.goForward();
             }
         });
 
@@ -134,8 +130,8 @@ public class MainActivity extends Activity {
             public void onClick(View v)
             {
                 // TODO
-                String strUrl = url.getText().toString();
-                show.loadUrl(strUrl);
+                String strUrl = autotext_url.getText().toString();
+                web_show.loadUrl(strUrl);
             }
         });
 
@@ -144,9 +140,21 @@ public class MainActivity extends Activity {
             public void onClick(View v)
             {
                 // TODO
-                show.loadUrl("http://www.baidu.com");
+                web_show.loadUrl("http://www.baidu.com");
             }
         });
+        closebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn=(Button) v;
+                finish();
+                System.exit(0);
+
+            }
+        });
+
+
+
 
         final Handler handler = new Handler()
         {
@@ -156,7 +164,7 @@ public class MainActivity extends Activity {
                 if (msg.what == 0x1111)
                 {
                     // whether can go back
-                    if (show.canGoBack())
+                    if (web_show.canGoBack())
                     {
                         backBtn.setEnabled(true);
                     }
@@ -166,7 +174,7 @@ public class MainActivity extends Activity {
                     }
 
                     // whether can go forward
-                    if (show.canGoForward())
+                    if (web_show.canGoForward())
                     {
                         forwardBtn.setEnabled(true);
                     }
@@ -195,9 +203,9 @@ public class MainActivity extends Activity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         // Check if the key event was the Back button and if there's history
-        if ((keyCode == KeyEvent.KEYCODE_BACK) && show.canGoBack())
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && web_show.canGoBack())
         {
-            show.goBack();
+            web_show.goBack();
             return true;
         }
         // If it wasn't the Back key or there's no web page history, bubble up to the default
@@ -210,4 +218,5 @@ public class MainActivity extends Activity {
         return super.onCreateOptionsMenu(menu);
 
     }
+
 }

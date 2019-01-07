@@ -5,19 +5,19 @@
     android:background="@drawable/qs">
 
     <AutoCompleteTextView
-        android:id="@+id/url"
+        android:id="@+id/autotext_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:completionHint="输入网址"
         android:completionThreshold="1"
-        android:inputType="textUri" />
+        android:inputType="textUri"
+        tools:text="输入网址" />
 
     <WebView
-        android:id="@+id/show"
+        android:id="@+id/web_show"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/btnLayout"
-        android:layout_below="@+id/url"
+        android:layout_below="@+id/autotext_url"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="-3dp" />
 
@@ -31,28 +31,35 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/back"
+            android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1.0"
             android:text="返回" />
 
         <Button
-            android:id="@+id/forward"
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="退出" />
+
+        <Button
+            android:id="@+id/btn_forward"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1.0"
             android:text="前进" />
 
         <Button
-            android:id="@+id/refresh"
+            android:id="@+id/btn_refresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1.0"
             android:text="刷新" />
 
         <Button
-            android:id="@+id/home"
+            android:id="@+id/btn_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1.0"
